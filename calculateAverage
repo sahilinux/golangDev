@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+func calculateAverage(n1, n2, n3 float64) float64 {
+	average := (n1 + n2 + n3) / 3
+	return average
+}
+
+func main() {
+	var n1, n2, n3 float64
+
+	fmt.Printf("Please enter First number:\t")
+	if _, err := fmt.Scan(&n1); err != nil {
+		fmt.Println("Invalid input, please enter a valid number:")
+		return
+	}
+	fmt.Printf("Please enter First number:\t")
+	if _, err := fmt.Scan(&n2); err != nil {
+		fmt.Println("Invalid input, please enter a valid number:")
+		return
+	}
+	fmt.Printf("Please enter First number:\t")
+	if _, err := fmt.Scan(&n3); err != nil {
+		fmt.Println("Invalid input, please enter a valid number:")
+		return
+	}
+
+	result := calculateAverage(n1, n2, n3)
+	fmt.Printf("The Average of %.1f, %.1f, %.1f is:%.1f", n1, n2, n3, result)
+
+}
